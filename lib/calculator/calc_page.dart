@@ -72,6 +72,7 @@ class CalculatorPageState extends State<CalculatorPage> {
                       flex: 2,
                       child: Wrap(
                         spacing: 16,
+                        runSpacing: 16,
                         children: [
                           CalcButtons(
                               calcObj: CalcObj(
