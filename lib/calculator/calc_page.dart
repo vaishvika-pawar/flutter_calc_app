@@ -48,7 +48,9 @@ class CalculatorPageState extends State<CalculatorPage> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              calculatorBloc.add(BackSpace(currentaUserInput: calcTextController.text));
+                            },
                             icon: Icon(
                               Icons.backspace_rounded,
                               color: Colors.deepPurple.shade200,
@@ -70,59 +72,59 @@ class CalculatorPageState extends State<CalculatorPage> {
                              calcObj: CalcObj(buttonText: "()",onpressEvent: Clear()), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "%",onpressEvent: OperatorInput(opr: "%")), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "%",onpressEvent: OperatorInput(opr: "%",currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "/",onpressEvent: OperatorInput(opr: "%")), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "/",onpressEvent: OperatorInput(opr: "%",currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "7",onpressEvent: NumberInput(number: 7)), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "7",onpressEvent: NumberInput(number: 7,currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "8",onpressEvent: NumberInput(number: 8)), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "8",onpressEvent: NumberInput(number: 8,currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "9",onpressEvent: NumberInput(number: 9)), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "9",onpressEvent: NumberInput(number: 9,currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "x",onpressEvent: OperatorInput(opr: "x")), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "x",onpressEvent: OperatorInput(opr: "x",currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "4",onpressEvent: NumberInput(number: 4)), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "4",onpressEvent: NumberInput(number: 4,currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "5",onpressEvent: NumberInput(number: 5)), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "5",onpressEvent: NumberInput(number: 5,currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "6",onpressEvent: NumberInput(number: 6)), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "6",onpressEvent: NumberInput(number: 6,currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "-",onpressEvent: OperatorInput(opr: "-")), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "-",onpressEvent: OperatorInput(opr: "-",currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "1",onpressEvent: NumberInput(number: 1)), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "1",onpressEvent: NumberInput(number: 1,currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "2",onpressEvent: NumberInput(number: 2)), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "2",onpressEvent: NumberInput(number: 2,currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "3",onpressEvent: NumberInput(number: 3)), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "3",onpressEvent: NumberInput(number: 3,currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "+",onpressEvent: OperatorInput(opr: "+")), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "+",onpressEvent: OperatorInput(opr: "+",currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: "+/-",onpressEvent: OperatorInput(opr: "+/-")), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: "+/-",onpressEvent: OperatorInput(opr: "+/-",currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                            calcObj: CalcObj( buttonText: "0",onpressEvent: OperatorInput(opr: "%")), calculatorBloc: calculatorBloc
+                            calcObj: CalcObj( buttonText: "0",onpressEvent: OperatorInput(opr: "%",currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
-                             calcObj: CalcObj(buttonText: ".",onpressEvent: OperatorInput(opr: ".")), calculatorBloc: calculatorBloc
+                             calcObj: CalcObj(buttonText: ".",onpressEvent: OperatorInput(opr: ".",currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                           CalcButtons(
                             buttonColor: Colors.deepPurple.shade200,
-                            calcObj: CalcObj(buttonText: "=",onpressEvent: ShowFinalResult()), calculatorBloc: calculatorBloc
+                            calcObj: CalcObj(buttonText: "=",onpressEvent: ShowFinalResult(currentaUserInput: calcTextController.text)), calculatorBloc: calculatorBloc
                           ),
                         ],
                       ),
