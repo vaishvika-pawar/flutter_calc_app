@@ -76,8 +76,6 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
   }
 
   Stream<CalculatorState> calculateResult(String currentaUserInput) async* {
-    print(listOfNumbers);
-    print(listOfOperations);
     if (!endsWithOperator(currentaUserInput) &&
         listOfOperations.isNotEmpty &&
         listOfNumbers.isNotEmpty &&
