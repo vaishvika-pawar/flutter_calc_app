@@ -65,8 +65,11 @@ class CalculatorPageState extends State<CalculatorPage> {
                             ))
                       ],
                     ),
-                    Divider(
-                      color: Colors.deepPurple.shade100,
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Divider(
+                        color: Colors.deepPurple.shade100,
+                      ),
                     ),
                     Expanded(
                       flex: 2,
